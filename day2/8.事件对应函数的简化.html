@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h3>数字: {{ num }}</h3>
+
+    <input type="button" @click="change_num" value="点我">
+
+    <input type="button" @click="low_num" value="戳你">
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            num: 20,
+        },
+        methods: {
+            // 标准写法
+            change_num: function () {
+                this.num += 2;
+            },
+            // 简化写法
+            low_num() {
+                this.num--;
+            },
+        },
+    })
+</script>
+
+</body>
+</html>

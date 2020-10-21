@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>这里是体重{{ fat }}</h3>
+
+    <input type="button" @click="add_fat" value="点我增重">
+
+    <input type="button" @click="red_fat" value="点我减重">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            fat: 140,
+        },
+        methods: {
+            add_fat:function () {
+                this.fat++;
+            },
+            red_fat() {
+                this.fat--;
+            },
+        }
+    })
+</script>
+
+</body>
+</html>

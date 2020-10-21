@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+    <style>
+        .a {
+            border: 4px lightpink solid;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <img :src="src" :title="title" :class="{a: showCss}">
+
+    <input type="button" value="点我改变图片样式" @click="addCss">
+    <input type="button" value="点我改变图片" @click="change_pic">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            title:"傻狗子",
+            showCss:true,
+            src:"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2858426577,4189650377&fm=26&gp=0.jpg",
+        },
+        methods: {
+            addCss() {
+                this.showCss = ! this.showCss;
+            },
+            change_pic() {
+                this.src = "https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1688000045,3644430586&fm=26&gp=0.jpg;"
+            },
+        }
+    })
+</script>
+
+</body>
+</html>

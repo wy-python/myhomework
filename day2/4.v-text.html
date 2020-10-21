@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <span>{{message}}, 大家是非常优秀的大学生</span>
+
+    <hr>
+    <!-- v-text="data中定义好的变量"  会覆盖标签中原有的值   -->
+    <span v-text="message">大家是非常优秀的大学生</span>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "百知教育欢迎大家",
+        },
+    })
+</script>
+
+</body>
+</html>

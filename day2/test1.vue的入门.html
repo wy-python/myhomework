@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    {{ message }}
+
+    <h3>{{user}}</h3>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message:"Hello Vue!",
+            user:[username="wuyi",pwd="123456"]
+        },
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

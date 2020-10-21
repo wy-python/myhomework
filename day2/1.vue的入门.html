@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    {{ message }}
+
+    <h2>{{username}}</h2>
+
+</div>
+<!--  vue js的引入  -->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<script src="js/vue.min.js"></script>
+<script>
+
+    // 创建第一个vue的实例
+    new Vue({
+        el: "#app",     // 用来定义vue的作用范围 element对象
+        // 用来给vue实例定义一些相关的数据  vue默认属性
+        data: {
+            // data中变量的名字可以随便定义
+            message: "Hello Vue!!",
+            username: "百知教育",
+        },
+    })
+</script>
+
+</body>
+</html>

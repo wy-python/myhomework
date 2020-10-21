@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>我是{{name}},这里是我的数字{{ num }}</h3>
+    <input type="button" value="点我更换数字" @click="change_num1(15,'铁鑫',)">
+    <input type="button" value="点我更换数字2" @click="change_num2()">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            num:51,
+            name:"武毅",
+        },
+        methods: {
+            change_num1(num,name) {
+                this.name=name;
+                this.num = num;
+            },
+            change_num2() {
+                alert("这里什么也没有")
+            },
+
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <!-- 思路   -->
+    <!-- 1.一个页面提供一个按钮
+         2.为这个按钮添加一个事件 click
+         3.在单击事件发生时修改身高的值,并渲染
+    -->
+    <h3>这里是身高{{ height }}</h3>
+    <input type="button" value="点我增加身高" v-on:click="add_height">
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            height:180,
+        },
+        methods: {
+            add_height(){
+                this.height = this.height + 5
+            },
+
+        }
+    })
+</script>
+
+</body>
+</html>

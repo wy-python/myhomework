@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app" class="aa">
+    <!--  插值表达式可以使用运算符  调用相关方法 -->
+    {{ msg.toUpperCase() }}
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        // vue可以使用任意类型的选择器  但只推荐大家使用id选择器
+        el: ".aa",
+        data: {
+            msg: "hello vue"
+        },
+    })
+</script>
+
+</body>
+</html>

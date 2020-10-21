@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h3>{{msg}}</h3>
+
+    <h3>数字: {{number * 6}}</h3>
+
+    <h3>用户名: {{user.username}}, 密码: {{user.password}}</h3>
+
+    <h3>{{arr[2]}}</h3>
+
+    <h3>{{users[1].username}}</h3>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            // 字符串
+            msg: "欢迎大家跟我一起学习vue",
+            // 数字
+            number: 20,
+            // 对象
+            user: {"username": '小黑', password: "123456"},
+            // 数组
+            arr: ["太原", "天津", "北京"],
+            // 数组中包含对象
+            users: [{"username": '小黑', password: "123456"}, {"username": '小波', password: "123456"},]
+        }
+    })
+</script>
+
+</body>
+</html>

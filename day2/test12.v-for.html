@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>{{user.name}}今年{{user.age}}岁,密码{{user.pwd}}</h3>
+    <h3><span v-for="(value, key ,index) in user">
+        {{key}}: {{value}}==={{index}}
+    </span></h3>
+    <ul v-for="(city,index) in arr">
+        <li>{{index ++}} : {{city}}</li>
+    </ul>
+    <hr>
+    <ul v-for="(value,index) in users" :key="index">
+        <li>{{index+1}}:{{value.name}}=={{value.age}}</li>
+    </ul>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            user: {name:"武毅",age:21,pwd:"123456"},
+            arr:["山东","北京","山西"],
+            users: [
+                {name:"武毅",age:21,pwd:"123456"},
+                {name:"铁鑫",age:20,pwd:"123456"},
+                {name:"龙哥",age:20,pwd:"123456"},
+            ]
+        },
+        methods: {},
+    })
+</script>
+
+</body>
+</html>

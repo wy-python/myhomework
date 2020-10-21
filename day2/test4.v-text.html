@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <hr>
+    <h3><span>Who am i,{{ msg }}</span></h3>
+
+    <hr>
+    <h3><span v-text="msg">oh</span></h3>
+
+    <hr>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg:"i am super boy :)"
+        },
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

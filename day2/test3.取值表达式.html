@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app" class="a">
+   <h3>{{ msg.toLowerCase() }}</h3>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        // el: "#app",
+        el:".a",
+        data: {
+            msg:"what a nice day :)"
+        },
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

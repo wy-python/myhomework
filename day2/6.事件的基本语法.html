@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- 1. 页面提供点击按钮
+         2. 给按钮绑定一个事件 onclick
+         3. 在单击事件触发的方法中来修改年龄的值 并渲染到页面上
+       -->
+
+    <h3>年龄: {{age}}</h3>
+    <!-- v-on:事件名="你在methods中定义好的方法的名称"   -->
+    <input type="button" value="点我长大" v-on:click="add_age">
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            age: 18,
+        },
+        // 用来定义vue的方法
+        methods: {
+            // 年龄增长的方法
+            add_age: function () {
+                // alert("方法触发了")
+                // 获取data中定义的age并增长
+                // 在事件方法中可以通过 this 来获取当前vue实例所包含的属性
+                console.log(this.age)
+                this.age++;
+                console.log(this.age, "1111")
+            },
+        },
+    })
+</script>
+
+</body>
+</html>
