@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <test></test>
+    <hr>
+    <test></test>
+    <hr>
+    <test></test>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+    <!--组件包括三部分,定义,注册,渲染-->
+<script>
+    let test = {
+
+        template: `
+            <div>我的第一个组件:)</div>
+        `,
+    }
+
+    //全局组件的注册需要调用 Vue.component
+
+    Vue.component("test", test)
+
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

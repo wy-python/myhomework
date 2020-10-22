@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <hr>
+    姓: <input type="text" v-model="firstName">
+    名: <input type="text" v-model="lastName">
+    <p>全名: {{ fullName }}</p>
+
+    <hr>
+    姓名: <input type="text" v-model=" FullName ">
+    姓: <b>{{FirstName}}</b>
+    名: <b>{{LastName}}</b>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            firstName:"",
+            lastName: "",
+            FullName:"",
+            FirstName:"",
+            LastName:"",
+        },
+        methods: {
+
+        },
+        computed:{
+            fullName() {
+                return this.firstName + this.lastName;
+            }
+        },
+        watch:{
+            FullName(){
+                let name = this.FullName.split("-")
+                this.FirstName = name[0];
+                this.LastName = name[1];
+
+            }
+        },
+
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+    //只有一条语句,省略{}
+    let app = (a,b) => console.log(a+b);
+    app(1,2)
+    //只有一个参数,省略()
+    let app1 = a => console.log(a*10);
+    app1(2)
+    //函数体只有return,省略return
+    let app2 = function (a, b) {
+        return a + b
+    }
+    let num = app2(2,3)
+    console.log(num)
+    //如果函数没有参数,则()不可省略
+    let app3 =() => console.log("my persious")
+    app3()
+
+
+</script>
+
+</body>
+</html>

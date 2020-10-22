@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+    <style>
+        .pink {
+            color: lightpink;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <com css="pink" user="wuyi"></com>
+    <hr>
+    <com css="yellow" user="tiexin"></com>
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    //子组件
+    let com = {
+        template:`
+            <div>
+                <div :class="css">这里是嵌套的div</div>
+            </div>
+
+        `,
+        // 可以在组件内接受组件标签传递过来的参数  从而使组件内部可以拥有动态的属性
+        // 此时使用props
+
+        props: ["css","user"],
+        created:function () {
+            console.log(this.user)
+        }
+
+    }
+
+    //Vue是父组件
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        components:{
+            "com":com,
+        },
+    })
+</script>
+
+</body>
+</html>

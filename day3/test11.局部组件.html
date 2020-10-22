@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+    <second></second>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    //这里是一个局部组件
+    let second = {
+        template:`
+                <div>这里是我的第一个局部组件</div>
+            `
+    }
+    // Vue是一个根组件
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        //务必注意这个s
+        components:{
+            "second":second,
+        }
+    })
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <second></second>
+
+</div>
+
+<script src="../js/vue.min.js"></script>
+<script>
+
+    let second = {
+        template: `
+            <div>这是局部组件</div>
+        `
+    }
+
+    // 全局注册
+    // Vue.component("second", second)
+
+    // 根组件
+    new Vue({
+        el: "#app",
+        data: {},
+        // 将second注册给某个vue实例
+        // 局部组件只能在注册的vue的实例中使用  其他作用范围不能使用
+        components: {
+            "second": second,
+        }
+    })
+</script>
+
+</body>
+</html>

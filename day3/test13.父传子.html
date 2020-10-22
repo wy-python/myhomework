@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="text" v-model="username">
+
+    <hr>
+    父组件的用户名是: {{username}}
+    <hr>
+    <app :number="username"></app>
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    let app ={
+        template:`
+            <div>
+            这是子组件的用户名: {{number}}
+            </div>
+
+        `,
+        //还是通过props接受父组件传来的数据
+        props:['number']
+
+    }
+
+
+
+
+    new Vue({
+        el: "#app",
+        data: {
+            username:"",
+        },
+        methods: {},
+        components:{
+            app:app,
+        },
+    })
+</script>
+
+</body>
+</html>

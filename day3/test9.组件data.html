@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <com></com>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+
+    let com = {
+        template: `
+          <div>
+          这一个组件
+          <br>
+          <span @click="change_user">这是组件的span标签, {{username}}</span>
+          </div>
+        `,
+        // 组件中data对应的值的函数
+        data: function () {
+            return {
+                username: "武毅",
+            }
+        },
+        methods: {
+            change_user(){
+                alert("这里是名字")
+            }
+        }
+    }
+    //注册com为全局的组件
+    Vue.component("com", com)
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

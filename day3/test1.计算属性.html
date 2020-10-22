@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+    <p>{{ number }}</p>
+    <p>十位: {{ parseInt( number / 10) }}</p>
+    <p>十位: {{ number % 10 }}</p>
+    <button @click="low_num" >点我减小数字</button>
+    <hr>
+    <input type="number" v-model="ten" max="9" min="0">
+    <input type="number" v-model="num" max="9" min="0">
+    <p>结果为: {{ ten * 10 + + num }}</p>
+    <p>结果为: {{result}}</p>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            number:51,
+            ten:"",
+            num:"",
+        },
+        methods: {
+            low_num(){
+                this.number--;
+            },
+        },
+        computed:{
+            result(){
+                return this.ten * 10 + + this.num;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

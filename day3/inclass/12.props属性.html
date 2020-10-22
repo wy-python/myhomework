@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <com css="red" user="tom"></com>
+    <com css="green" user="marry"></com>
+
+</div>
+
+<script src="../js/vue.min.js"></script>
+<script>
+
+    // z组件中的template中只能有一个唯一的根标签,不能有同级的标签
+    // 组件的根标签可以不是div 不能有兄弟标签
+
+    // 子组件
+    let com = {
+        template: `
+            <div>
+                <div :class="css">这还是我的组件</div>
+            </div>
+
+        `,
+        // 可以在组件内接受组件标签传递过来的参数  从而使组件内部可以拥有动态的属性
+        // props可以理解为一个数组  里面是所有组件可以接收的参数,相当于参数名
+        // 可以将props理解为一个只读的data属性
+        props: ["css", "user"],
+        created: function () {
+            console.log(this.user)
+        }
+    }
+
+    // 父组件
+    new Vue({
+        el: "#app",
+        data: {},
+        components: {
+            "com": com,
+        },
+    })
+</script>
+
+</body>
+</html>

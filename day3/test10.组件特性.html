@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    
+    <first></first>
+
+    <h3 @click="low_num">这是vue组件的属性: {{number}}</h3>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+
+    let first = {
+        template: `
+          <div>这是我的第一个组件
+          <button @click="change_num">点击我改变数字</button>
+          <div>我是first内部的div块, 这里是数字:{{ number }}</div>
+          </div>
+        `,
+        methods: {
+            change_num() {
+                this.number--;
+            },
+        },
+        data: function () {
+            return {
+                number: 51,
+            }
+        },
+    }
+
+    Vue.component("first", first)
+    
+    let app = new Vue({
+        el: "#app",
+        data: {
+            number:15,
+        },
+        methods: {
+            low_num() {
+                this.number++;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

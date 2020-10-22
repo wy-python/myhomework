@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    这里是父组件的用户名: {{username}}
+    <hr>
+    <com  @cli="change_user"></com>
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    let com = {
+        template:`
+            <div>这里是子组件: <br>
+            单击按钮即可变换用户名:
+            <button @click="click">单击</button>
+            </div>
+        `,
+        methods:{
+            click(){
+                this.$emit("cli","于铁鑫")
+            },
+
+        },
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            username:"武毅",
+        },
+        methods: {
+            change_user(username){
+                this.username = username;
+            },
+        },
+        components:{
+            com:com,
+        }
+    })
+</script>
+
+</body>
+</html>

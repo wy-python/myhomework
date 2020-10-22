@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+
+    let user1 = {
+        username: "武毅",
+        app: function () {
+            // 该this指向的是当前的user1的实例
+            console.log(this.username)
+        }
+    }
+
+    user1.app()
+
+    let user2 = {
+        username: "于铁鑫",
+        app: function () {
+            // 在回调函数中this的指向会被改变  
+            setTimeout(function () {
+                // 因为this指向改变,获取不到this对象了.username无法正常展示
+                console.log(this.username)
+            })
+        }
+    }
+    user2.app()
+
+    let user3 = {
+        username: "龙哥",
+
+        app: function () {
+            // 回调函数中this指向会被改变
+            // 在回调函数中使用箭头函数不会改变this指向,该username则能正常展示
+            setTimeout(() => {
+                console.log(this.username);
+            })
+        }
+    }
+    user3.app()
+
+
+</script>
+
+</body>
+</html>
