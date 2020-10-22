@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>这里是演示页面</h3>
+    <hr>
+    <router-view></router-view>
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="vue-router.3.0.1(1).js"></script>
+<script>
+
+    let first ={
+        template:`
+            <div>
+                这里是第一个组件
+                <router-link to="/second?id=1&name=wuyi">查看组件二的这一页面</router-link>
+</div>
+        `
+    }
+    let second = {
+        template: `
+            <div>这是第二个组件: 组件1传递过来的id: {{ $route.query.id }}
+            <br>
+            这是第一个组件传递的用户名: {{$route.query.name}}
+            </div>
+
+        `
+    }
+
+    let myRouter = new VueRouter({
+        routes: [
+            {path: "/first", component: first},
+            {path: "/second", component: second},
+            {path: "/", redirect: "/first"},
+        ]
+    })
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        router:myRouter
+    })
+</script>
+
+</body>
+</html>

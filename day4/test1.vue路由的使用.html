@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h3>这里是主页</h3>
+    <hr>
+    <router-link to="/first">访问首页</router-link>
+    <router-link to="/second">访问分类信息页面</router-link>
+
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="vue-router.3.0.1(1).js"></script>
+<script>
+    let first = {
+        template:`
+            <div>首页</div>
+        `
+    }
+
+    let second = {
+        template: `
+            <div>分类信息页面</div>
+        `
+    }
+    // 1.为每个组件准备对应的路由  定义组件与路由的映射关系
+    // 2.页面中输入路由来显示对应的组件
+    // 3.需要将定义好的路由注入到当前vue实例中
+    let myRouter = new VueRouter({
+        routes:[
+            // path指的是访问组件的地址
+            // component代表这个地址对应的组件
+            {path: "/first",component:first },
+            {path: "/second",component:second },
+            {path: "/",component:first },
+            {path: "/*",component:first },
+        ]
+
+
+    })
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        router:myRouter,
+    })
+</script>
+
+</body>
+</html>

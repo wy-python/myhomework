@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>您现在访问的是首页</h2>
+    <router-link to="/index">首页</router-link>
+    <router-link to="/ems">ems</router-link>
+    <hr>
+
+    <router-view></router-view>
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="vue-router.3.0.1(1).js"></script>
+<script>
+
+    let index = {
+        template:`
+            <div>
+            <h2>这里是首页</h2>
+            <h3>欢迎使用ems系统</h3>
+</div>
+        `
+    }
+
+    let ems ={
+        template: `
+            <div>
+            <h3>用户列表</h3>
+            <table border="1">
+            <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>生日</td>
+            <td>操作</td>
+            </tr>
+            <tr v-for="user in users">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.bir}}</td>
+            <td>更新|删除</td>
+            </tr>
+</table>
+</div>
+        `,
+        data(){
+          return{
+              users:[
+                  {"id": 1, username: "武毅", bir: "2009-12-12"},
+                  {"id": 2, username: "铁鑫", bir: "2010-11-12"},
+                  {"id": 3, username: "龙哥", bir: "2011-12-12"},
+              ]
+          }
+        },
+    }
+    let myRouter = new VueRouter({
+        routes:[
+            {path: "/index", component: index},
+            {path: "/ems", component: ems},
+            {path: "/", redirect: "/index"},
+            {path: "/*", redirect: "/index"}
+        ]
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        router:myRouter,
+    })
+</script>
+
+</body>
+</html>

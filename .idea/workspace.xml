@@ -20,36 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fea656-98c8-40c2-896b-61e900b0f551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day3/inclass/1.计算属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/10.组件的特性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/11.局部组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/12.props属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/13.父传子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/14.子传父.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/2.监听事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/3.案例yi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/4.箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/5.多种写法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/6.箭头函数的特性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/7.生命周期钩子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/8.全局组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/inclass/9.组件中data的使用.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/js/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test1.计算属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test10.组件特性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test11.局部组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test12.props.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test13.父传子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test14.子传父.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test2.监听事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test3.姓名案例.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test4.箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test5.多种写法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test6.箭头函数特性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test7.生命周期和钩子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test8.全局组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/test9.组件data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/1.vue路由的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/2.组件的应用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/3.路由的参数传递.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/4.动态路由传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/5.js跳转传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/inclass/vue-router.3.0.1(1).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/test1.vue路由的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/test2.组件的应用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/test3.路由的参数传递.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/test4.动态路由传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/test5.js跳转传参.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/vue-router.3.0.1(1).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-router.3.0.1(1).js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,18 +65,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day4" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\talon\WebstormProjects\day3" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\talon\WebstormProjects" />
+      <recent name="C:\Users\talon\WebstormProjects\day4\inclass" />
       <recent name="C:\Users\talon\WebstormProjects\day3\inclass" />
       <recent name="C:\Users\talon\WebstormProjects\day2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\talon\WebstormProjects\day4" />
+      <recent name="C:\Users\talon\WebstormProjects\day4\inclass" />
+      <recent name="C:\Users\talon\WebstormProjects\day3" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +98,8 @@
       <workItem from="1603201659875" duration="1000" />
       <workItem from="1603240406528" duration="2368000" />
       <workItem from="1603244585257" duration="10000" />
-      <workItem from="1603269594242" duration="15603000" />
+      <workItem from="1603269594242" duration="17196000" />
+      <workItem from="1603361148398" duration="4709000" />
     </task>
     <servers />
   </component>
@@ -131,6 +121,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="992" y="199" key="#Web_Browsers" timestamp="1603197230096">
@@ -141,9 +132,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="822" y="159" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603197955270" />
-    <state x="540" y="58" key="SettingsEditor" timestamp="1603197955998">
+    <state x="540" y="58" key="SettingsEditor" timestamp="1603368699785">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603197955998" />
+    <state x="540" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603368699785" />
   </component>
 </project>
