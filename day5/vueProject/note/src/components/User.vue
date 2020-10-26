@@ -1,8 +1,8 @@
 <template>
 
     <div>
-        <h3>用户详情页</h3>
-        <table border="1">
+        <h2 class="h2">用户详情页</h2>
+        <table border="1" class="table">
             <tr>
                 <td>ID</td>
                 <td>姓名</td>
@@ -22,9 +22,18 @@
         </table>
 
         <hr>
-        用户名: <input type="text" v-model="username"><br>
-        生日: <input type="text" v-model="bir"><br>
-        个人信息: <input type="text" v-model="content"><br>
+        <table>
+            <td>
+                <tr>用户名:</tr>
+                <tr>生日:</tr>
+                <tr>个人信息:</tr>
+            </td>
+            <td>
+                <tr><input type="text" v-model="username"></tr>
+                <tr><input type="text" v-model="bir"></tr>
+                <tr><input type="text" v-model="content"></tr>
+            </td>
+        </table>
         <button @click="addUser">添加用户</button>
 
     </div>
@@ -67,5 +76,14 @@ export default {
 </script>
 
 <style scoped>
+    .table{
+        font-size: 20px;
+        color: pink;
+        margin: auto;
 
+    }
+    .h2{
+        color: powderblue;
+        text-align: center;
+    }
 </style>

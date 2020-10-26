@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <h3>留言板</h3>
+    <div class="div">
+        <h2 class="h2">留言板</h2>
+        <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1169126832,257358317&fm=26&gp=0.jpg" alt="" class="img">
         <hr>
         <input type="text" v-model="msg">
         <button @click="add_note">添加留言</button>
-        <ul>
+        <ul class="ul">
             <li v-for="(note, index) in msg_list" :key="index">{{ note }}
-                <a href="javascript:;" @click="delNote(index)">删除</a>
+                <a href="javascript:;" @click="delNote(index)" class="a">删除</a>
             </li>
         </ul>
 
@@ -58,5 +59,21 @@ export default {
 </script>
 
 <style scoped>
-
+.h2{
+    color: powderblue;
+    text-align: center;
+}
+.div{
+    margin: auto;
+}
+.a{
+    text-decoration: none;
+    color: lightskyblue;
+}
+.ul{
+    font-size: 20px;
+}
+.img{
+    margin: auto;
+}
 </style>
