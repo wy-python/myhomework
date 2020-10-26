@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    //localStorage都是以key-value的形式将数据储存的,直接存储到硬盘
+    // localStorage中的数据必须用户主动删除才,数据大小约为2~5M
+
+    localStorage.age = 12;
+    console.log(localStorage["age"])
+    localStorage['bir'] = "1950-10-25";
+    localStorage.setItem("pwd", "19501025");
+    console.log(localStorage.bir)
+    let pwd = localStorage.getItem("pwd")
+
+    // 删除数据
+    localStorage.name = "武毅";
+    // localStorage.removeItem("name")
+    // console.log(localStorage.name)
+
+    // 删除所有
+    localStorage.clear()
+
+    // sessionStorage与localStorage在使用方式上完全一致
+    // sessionStorage.name = "武大毅";
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

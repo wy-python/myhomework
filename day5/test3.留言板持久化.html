@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+    <h3>留言板</h3>
+    <hr>
+    <input type="text" v-model="msg">
+    <button @click="add_note">添加留言</button>
+
+    <ol>
+        <li v-for="(note, index) in msg_list" :key="index">{{ note }}</li>
+    </ol>
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script src="vue-router.3.0.1(1).js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg:"",
+            //判断localStorage是否有值,有值则显示,没有值就设置为空数组,不显示
+            msg_list:localStorage.msgs ? JSON.parse(localStorage.msgs) : [],
+        },
+        methods: {
+            add_note(){
+                let msg = this.msg;
+                if (msg){
+                    // 将用户发表的留言储存到localstorage
+                    // 储存前将数据进行序列化
+                    this.msg_list.push(this.msg);
+                    localStorage.msgs = JSON.stringify(this.msg_list);
+                    this.msg = "";
+                };
+            },
+        },
+    })
+</script>
+
+</body>
+</html>

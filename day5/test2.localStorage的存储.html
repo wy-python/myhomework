@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wy-python</title>
+</head>
+<body>
+
+<div id="app">
+
+
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+
+    let local = localStorage;
+    local.number = 70;
+    local.name = "武毅";
+
+    local.student1 = {
+        id : 1,
+        username: "武大毅",
+        age: 18,
+    }
+    console.log(local.student1)
+
+    let student2 = {
+        id : 2,
+        username: "于铁鑫",
+        age: 18,
+    }
+
+    // 储存对象类型的数据 需要将数据进行序列化
+    local.stu1 = JSON.stringify(student2);
+
+    // 取出数据  将数据反序列化成对象
+    let stu2 = JSON.parse(local.stu1);
+
+    console.log(stu2.age)
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {}
+    })
+</script>
+
+</body>
+</html>

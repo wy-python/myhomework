@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // localStorage都是以key-value的形式将数据储存的
+    // localStorage储存的信息会直接以文本的形式保存到硬盘  不会随着页面刷新而 浏览器关闭的关系而消失
+    // localStorage中的数据必须用户主动删除才会消失  2-5m 数据
+    // localStorage.name = "百知教育";
+    // console.log(localStorage.name)
+
+    // 删除数据
+    // localStorage.removeItem("name")
+    // console.log(localStorage.name)
+
+    // localStorage数据的储存方式  与访问方式
+    localStorage.age = 12;
+    localStorage['bir'] = "2012-12-12";
+    localStorage.setItem("pwd", "123456");
+    // console.log(localStorage.bir)
+    // console.log(localStorage["age"])
+    // let pwd = localStorage.getItem("pwd")
+    // console.log(pwd)
+
+    // 遍历数据
+    // for (let n = 0; n < localStorage.length; n++) {
+    //     console.log("第" + n + "条数据的key为" + localStorage.key(n) + ",value为" + localStorage.getItem(localStorage.key(n)))
+    // }
+
+    // 删除所有
+    localStorage.clear()
+
+    // sessionStorage与localStorage在使用方式上完全一致
+    // sessionStorage.name = "小白";
+</script>
+
+</body>
+</html>
